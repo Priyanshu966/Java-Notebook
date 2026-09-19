@@ -1,0 +1,47 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 5,
+  "metadata": {
+    "language_info": {
+      "name": "java"
+    }
+  },
+  "cells": [
+    {
+      "id": "c132d616-0c3d-42dc-8184-e8ef7916c7fe",
+      "cell_type": "markdown",
+      "source": "# Introduction to Java\r\n\r\n## What is Java?\r\n\r\nJava is a **high-level, object-oriented, class-based programming language** developed by James Gosling at **Sun Microsystems** in 1995.\r\n\r\nJava is widely used for developing:\r\n- Desktop applications\r\n- Web applications\r\n- Mobile applications\r\n- Enterprise applications\r\n- Backend systems\r\n\r\n## Features of Java\r\n\r\nSome important features of Java are:\r\n\r\n1. **Simple** – Java has a relatively simple and easy-to-understand syntax.\r\n2. **Object-Oriented** – Java is based on objects and classes.\r\n3. **Platform Independent** – Java programs can run on different operating systems using the JVM.\r\n4. **Secure** – Java provides various features for secure application development.\r\n5. **Robust** – Java has strong memory management and exception handling.\r\n6. **Multithreaded** – Java supports executing multiple tasks concurrently.\r\n7. **Portable** – Java bytecode can be moved between different platforms.\r\n8. **High Performance** – The JVM uses techniques such as Just-In-Time (JIT) compilation to improve performance.\r\n\r\n## How Java Works\r\n\r\nA Java program goes through the following process:\r\n\r\n```text\r\nJava Source Code (.java)\r\n          ↓\r\n       Compiler\r\n       (javac)\r\n          ↓\r\n   Bytecode (.class)\r\n          ↓\r\n          JVM\r\n          ↓\r\n   Machine Code\r\n          ↓\r\n       Output\r\n\r\n```\r\n\r\nThe Java compiler converts the source code into bytecode.\r\nThe JVM (Java Virtual Machine) executes this bytecode.\r\n\r\nBecause different operating systems have their own JVM implementations, the same Java bytecode can run on different platforms.\r\n\r\n#### **JDK, JRE and JVM**\r\n#### **JVM**\r\n\r\nJVM (Java Virtual Machine) is responsible for executing Java bytecode.\r\n\r\n#### **JRE**\r\n\r\nJRE (Java Runtime Environment) provides the environment required to run Java applications.\r\n\r\n#### **JDK**\r\n\r\nJDK (Java Development Kit) provides the tools required to develop and run Java applications.\r\n\r\nThe relationship can be represented as:",
+      "metadata": {
+        "language": "markdown",
+        "id": "c132d616-0c3d-42dc-8184-e8ef7916c7fe"
+      }
+    },
+    {
+      "id": "2cb0613d-610c-4ffa-a243-675873cf27b3",
+      "cell_type": "markdown",
+      "source": "",
+      "metadata": {
+        "language": "markdown",
+        "id": "2cb0613d-610c-4ffa-a243-675873cf27b3"
+      }
+    },
+    {
+      "id": "07f28c93-0e5b-4113-b3aa-eec4488f70e1",
+      "cell_type": "markdown",
+      "source": "## Why is Java Platform Independent?\r\n\r\nJava follows the principle:\r\n\r\nWrite Once, Run Anywhere (WORA)\r\n\r\nJava source code is compiled into bytecode instead of directly into machine code.\r\n\r\nThe bytecode is executed by the JVM available on the target operating system.\r\n\r\nTherefore:\r\n\r\n```\r\nSame Java Bytecode\r\n       ↓\r\n ┌─────┼─────┐\r\n ↓     ↓     ↓\r\nWindows Linux macOS\r\n JVM    JVM    JVM",
+      "metadata": {
+        "language": "markdown",
+        "id": "07f28c93-0e5b-4113-b3aa-eec4488f70e1"
+      }
+    },
+    {
+      "id": "07c52428-26aa-4715-b5f8-789d841444ae",
+      "cell_type": "markdown",
+      "source": "",
+      "metadata": {
+        "language": "markdown",
+        "id": "07c52428-26aa-4715-b5f8-789d841444ae"
+      }
+    }
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 5,
+  "metadata": {
+    "language_info": {
+      "name": "java"
+    }
+  },
+  "cells": [
+    {
+      "id": "18946288-a12f-4067-bfb1-27382a88f1ec",
+      "cell_type": "markdown",
+      "source": "## **Data Types**",
+      "metadata": {
+        "language": "markdown",
+        "id": "18946288-a12f-4067-bfb1-27382a88f1ec"
+      }
+    },
+    {
+      "id": "c9138ca0-f697-463a-b2c3-7e2b8e2e92be",
+      "cell_type": "markdown",
+      "source": "Java has two major categories:\r\n\r\n```\r\nData Types\r\n├── Primitive\r\n└── Non-Primitive / Reference",
+      "metadata": {
+        "language": "markdown",
+        "id": "c9138ca0-f697-463a-b2c3-7e2b8e2e92be"
+      }
+    },
+    {
+      "id": "7840b50d-99d2-4474-9678-e91dc999452b",
+      "cell_type": "markdown",
+      "source": "### **1. Primitive Data Types**\r\n\r\n* **Definition:** Basic, built-in types that hold a single value.\r\n* **Storage:** The actual value is saved directly in fast memory (Stack).\r\n* **Methods:** They cannot perform actions or call methods.\r\n* **Null Values:** They can never be `null`.\r\n* **Example:** `int age = 25;`\r\n\r\nJava has 8 primitive types.\r\n\r\n| Type | Size | Example |\r\n| :--- | :--- | :--- |\r\n| byte | 8 bits | 10 |\r\n| short | 16 bits | 100 |\r\n| int | 32 bits | 1000 |\r\n| long | 64 bits | 10000L |\r\n| float | 32 bits | 10.5f |\r\n| double | 64 bits | 10.5 |\r\n| char | 16 bits | 'A' |\r\n| boolean | JVM-dependent | true |\r\n",
+      "metadata": {
+        "language": "markdown",
+        "id": "7840b50d-99d2-4474-9678-e91dc999452b"
+      }
+    },
+    {
+      "id": "394cde41-a519-4395-a260-141ab9cb2aaf",
+      "cell_type": "markdown",
+      "source": "### - Formulas for Java Data Type Ranges\r\n\r\nFor signed integer types (`byte`, `short`, `int`, `long`), the range depends on the number of bits ($n$):\r\n\r\n$$[-2^{n-1} \\text{ to } 2^{n-1} - 1]$$\r\n\r\n#### Examples:\r\n* **`byte` ($8$ bits):** $[-2^{7} \\text{ to } 2^{7} - 1] \\implies \\mathbf{[-128 \\text{ to } 127]}$\r\n* **`short` ($16$ bits):** $[-2^{15} \\text{ to } 2^{15} - 1] \\implies \\mathbf{[-32768 \\text{ to } 32767]}$\r\n\r\n---\r\n\r\n### - Formula for Unsigned Characters (`char`)\r\n\r\nThe `char` data type in Java is unsigned (always positive) and uses $16$ bits:\r\n\r\n$$[0 \\text{ to } 2^n - 1]$$\r\n\r\n* **`char` ($16$ bits):** $[0 \\text{ to } 2^{16} - 1] \\implies \\mathbf{[0 \\text{ to } 65535]}$\r\n\r\n---\r\n",
+      "metadata": {
+        "language": "markdown",
+        "id": "394cde41-a519-4395-a260-141ab9cb2aaf"
+      }
+    },
+    {
+      "id": "ecdd24c4-5a19-413a-9f03-aa5a8d9fbbc0",
+      "cell_type": "markdown",
+      "source": "### **2. Non-Primitive/Reference DataTypes**\r\n\r\n* **Definition:** Complex objects created by developers or Java.\r\n* **Storage:** Holds a memory address (Reference) pointing to the real data (Heap).\r\n* **Methods:** They can use built-in methods to perform actions.\r\n* **Null Values:** They can be set to `null` (empty).\r\n* **Example:** `String name = \"Alex\";`\r\n\r\nExamples:\r\n\r\n- String\r\n- Array\r\n- Class\r\n- Object\r\n- Interface\r\n- Enum\r\n\r\nExample:\r\n\r\nString name = \"Suraj\";\r\n\r\nUnlike primitive variables, reference variables generally store a reference to an object.\r\n\r\n---\r\n\r\n\r\n\r\n---\r\n\r\n### 📊 Quick Comparison\r\n\r\n| Feature | Primitive Types | Non-Primitive Types |\r\n| :--- | :--- | :--- |\r\n| **What it holds** | The actual value | A memory address |\r\n| **Letter casing** | Always lowercase (`int`) | Capitalized (`String`) |\r\n| **Capabilities** | Just stores data | Has methods & functions |\r\n| **Default value** | `0`, `0.0`, or `false` | `null` |\r\n",
+      "metadata": {
+        "language": "markdown",
+        "id": "ecdd24c4-5a19-413a-9f03-aa5a8d9fbbc0"
+      }
+    },
+    {
+      "id": "abea7d94-0cca-4ac0-9504-51f31a08a91d",
+      "cell_type": "markdown",
+      "source": "\r\n\r\n## **Type Conversion**\r\n\r\nType conversion means converting a value from one type to another.\r\n\r\nThere are two major forms:\r\n\r\n1. Widening\r\n2. Narrowing",
+      "metadata": {
+        "language": "markdown",
+        "id": "abea7d94-0cca-4ac0-9504-51f31a08a91d"
+      }
+    },
+    {
+      "id": "2adb0cc4-e9ab-4291-8ead-c2391fe94f61",
+      "cell_type": "markdown",
+      "source": "### 1. Widening Conversion\r\n\r\nWidening converts a value from a smaller compatible numeric type to a larger one.\r\n\r\nExample:",
+      "metadata": {
+        "language": "markdown",
+        "id": "2adb0cc4-e9ab-4291-8ead-c2391fe94f61"
+      }
+    },
+    {
+      "id": "c8928ed1-6b9d-49b0-b021-a963b3c0d63d",
+      "cell_type": "code",
+      "source": "int x = 10;\r\n\r\ndouble y = x;",
+      "metadata": {
+        "language": "java"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "id": "e86bb422-9dcd-431e-a0fe-3efad278aafa",
+      "cell_type": "markdown",
+      "source": "### 2. Narrowing Conversion\r\n\r\nNarrowing converts a value from a larger numeric type to a smaller type.\r\n\r\nIt normally requires an explicit cast.",
+      "metadata": {
+        "language": "markdown",
+        "id": "e86bb422-9dcd-431e-a0fe-3efad278aafa"
+      }
+    },
+    {
+      "id": "9481fced-7e76-4a36-af26-bece01f7cd1d",
+      "cell_type": "code",
+      "source": "double x = 10.8;\r\n\r\nint y = (int) x;",
+      "metadata": {
+        "language": "java"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "id": "cb88fc5a-663b-45ea-a2d9-96a170d8588d",
+      "cell_type": "markdown",
+      "source": "results: 10  \r\nThe fractional part is discarded.",
+      "metadata": {
+        "language": "markdown",
+        "id": "cb88fc5a-663b-45ea-a2d9-96a170d8588d"
+      }
+    }
+  ]
+}

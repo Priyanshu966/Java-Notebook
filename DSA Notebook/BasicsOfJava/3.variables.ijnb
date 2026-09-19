@@ -1,0 +1,75 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 5,
+  "metadata": {
+    "language_info": {
+      "name": "java"
+    }
+  },
+  "cells": [
+    {
+      "id": "d4594fd9-c919-4f0e-86ea-07b90fb74ad7",
+      "cell_type": "markdown",
+      "source": "# **Variables**",
+      "metadata": {
+        "language": "markdown",
+        "id": "d4594fd9-c919-4f0e-86ea-07b90fb74ad7"
+      }
+    },
+    {
+      "id": "0c935742-e0c0-47dc-b6cd-597caf576472",
+      "cell_type": "markdown",
+      "source": "### 📦 What is a Variable?\r\nA variable is a named storage location used to hold the value. It allocates a specific chunk of computer memory to hold a value (like an integer, a character, or an object reference). It has a data type that limits what kind of information it can store.\r\n\r\n### 🏷️ What is an Identifier?\r\nAn identifier is simply a technical term for any user-defined name in your source code. Java uses identifiers to distinctively recognize different components. \r\n\r\nIdentifiers are used to name:\r\n* **Classes** (e.g., `String`, `MyProgram`)\r\n* **Methods** (e.g., `main()`, `printLines()`)\r\n* **Variables** (e.g., `age`, `totalPrice`)\r\n* **Packages** (e.g., `java.util`)\r\n\r\n---\r\n\r\n### 💻 Code Example\r\n\r\nConsider this simple line of Java code:\r\n\r\n```java\r\nint speedLimit = 60;\r\n```\r\n\r\n* **`int`** is a reserved keyword, not an identifier.\r\n* **`speedLimit`** is the **identifier** (the name). \r\n* The actual memory address allocated to store the integer value `60` is the **variable**. You use the identifier `speedLimit` to read or overwrite that variable's value.\r\n\r\n## A variable and an identifier are not the same thing in Java.\r\n\r\nWhile they are closely related and often used interchangeably in casual conversation, they have distinct technical definitions. The simplest way to understand the relationship is: **an identifier is the name, while a variable is the container.** Every variable name is an identifier, but not every identifier is a variable name.\r\n\r\n---\r\n\r\n### 📊 Key Differences At a Glance\r\n\r\n| Feature | Identifier | Variable |\r\n| :--- | :--- | :--- |\r\n| **Core Concept** | A token that represents a **name**. | A **storage location** in memory with a data type. |\r\n| **Purpose** | Uniquely identifies programming elements. | Holds data values that can change during execution. |\r\n| **Scope of Use** | Used for classes, methods, variables, interfaces, etc. | Only used to refer to memory data storage. |\r\n\r\n---\r\n",
+      "metadata": {
+        "language": "markdown",
+        "id": "0c935742-e0c0-47dc-b6cd-597caf576472"
+      }
+    },
+    {
+      "id": "9cef3ca8-7074-477a-820e-5cfa6cb2e648",
+      "cell_type": "code",
+      "source": "int age;\r\nString name;\r\nclass Student;",
+      "metadata": {
+        "language": "java"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "id": "7ad39672-9d2b-4cc8-b95d-1e1bbfa2683d",
+      "cell_type": "markdown",
+      "source": "```\r\nage     -> identifier\r\nname    -> identifier\r\nStudent -> identifier\r\n```",
+      "metadata": {
+        "language": "markdown",
+        "id": "7ad39672-9d2b-4cc8-b95d-1e1bbfa2683d"
+      }
+    },
+    {
+      "id": "3be8bac4-7f0e-4182-995e-16f6ddbeb662",
+      "cell_type": "markdown",
+      "source": "",
+      "metadata": {
+        "language": "markdown",
+        "id": "3be8bac4-7f0e-4182-995e-16f6ddbeb662"
+      }
+    },
+    {
+      "id": "a803bf3e-759e-4c82-9ff5-cb0ee86066c6",
+      "cell_type": "markdown",
+      "source": "## 1.Rules for identifiers\r\n\r\nAn identifier:\r\n\r\n- Can contain letters\r\n- Can contain digits\r\n- Can contain _  and $ , other than these two , no other symbols are allowed\r\n- Cannot start with a digit\r\n- Cannot be a Java keyword\r\n- Is case-sensitive\r\n- It cant contain any spaces\r\n\r\nValid:- \r\n\r\nage\r\nstudentName\r\nstudent1\r\n_student\r\n$price\r\n\r\nInvalid:- \r\nage\r\nstudentName\r\nstudent1\r\n_student\r\n$price",
+      "metadata": {
+        "language": "markdown",
+        "id": "a803bf3e-759e-4c82-9ff5-cb0ee86066c6"
+      }
+    },
+    {
+      "id": "117f4772-6cfc-4269-9ad8-1748950436d9",
+      "cell_type": "markdown",
+      "source": "",
+      "metadata": {
+        "language": "markdown",
+        "id": "117f4772-6cfc-4269-9ad8-1748950436d9"
+      }
+    }
+  ]
+}

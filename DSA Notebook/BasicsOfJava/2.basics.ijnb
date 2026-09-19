@@ -1,0 +1,102 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 5,
+  "metadata": {
+    "language_info": {
+      "name": "java"
+    }
+  },
+  "cells": [
+    {
+      "id": "7bae0849-23ba-40df-90b4-d015535024ed",
+      "cell_type": "markdown",
+      "source": "## Basics of Java",
+      "metadata": {
+        "language": "markdown",
+        "id": "7bae0849-23ba-40df-90b4-d015535024ed"
+      }
+    },
+    {
+      "id": "62081469-2323-4257-be2a-76bff6eadfda",
+      "cell_type": "code",
+      "source": "class Main {\r\n\r\n    public static void main(String[] args) {\r\n\r\n        System.out.println(\"Hello World\");\r\n\r\n    }\r\n}\r\n\r\n// class Main → Defines a class named Main.\r\n\r\n// main() → The main entry point of a traditional Java application.Code execution starts from main() method.\r\n\r\n// public → Makes the method accessible to the JVM.\r\n\r\n// static → Allows the JVM to call the method without creating an object.\r\n\r\n// void → Indicates that the method does not return a value.\r\n\r\n// String[] args → Stores command-line arguments.\r\n\r\n// System.out.println() → Prints output to the console.",
+      "metadata": {
+        "language": "java",
+        "id": "62081469-2323-4257-be2a-76bff6eadfda",
+        "executionSummary": {
+          "executionOrder": 10,
+          "success": true
+        }
+      },
+      "execution_count": 10,
+      "outputs": []
+    },
+    {
+      "id": "3eb0d2d3-7123-402e-8a33-694007781877",
+      "cell_type": "code",
+      "source": "System.out.print(\"Hello \");     // print method will print the input but it wont end with next line\r\nSystem.out.print(\"World\");",
+      "metadata": {
+        "language": "java",
+        "id": "3eb0d2d3-7123-402e-8a33-694007781877",
+        "executionSummary": {
+          "executionOrder": 8,
+          "success": true
+        }
+      },
+      "execution_count": 8,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": "Hello World"
+          },
+          "metadata": {},
+          "execution_count": 8
+        }
+      ]
+    },
+    {
+      "id": "a85f8759-1f0c-439d-8c2d-1ceeaf6ada92",
+      "cell_type": "code",
+      "source": "System.out.println(\"Hello\");\r\nSystem.out.println(\"World\");     // println always end with next line",
+      "metadata": {
+        "language": "java",
+        "id": "a85f8759-1f0c-439d-8c2d-1ceeaf6ada92",
+        "executionSummary": {
+          "executionOrder": 9,
+          "success": true
+        }
+      },
+      "execution_count": 9,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": "Hello\r\nWorld\r\n"
+          },
+          "metadata": {},
+          "execution_count": 9
+        }
+      ]
+    },
+    {
+      "id": "1b82ae0d-326e-4c37-902c-d699a51cf753",
+      "cell_type": "markdown",
+      "source": "## Comments",
+      "metadata": {
+        "language": "markdown",
+        "id": "1b82ae0d-326e-4c37-902c-d699a51cf753"
+      }
+    },
+    {
+      "id": "77aadea0-f783-42e2-8041-111c4e047fac",
+      "cell_type": "code",
+      "source": "// This is single line comment\r\n/* This is a multi-line comment */",
+      "metadata": {
+        "language": "java"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
