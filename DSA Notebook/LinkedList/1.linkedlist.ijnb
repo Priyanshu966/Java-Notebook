@@ -33,11 +33,11 @@
         "language": "java",
         "id": "e1bdff62-1b58-4c2c-a473-25b4e55c4386",
         "executionSummary": {
-          "executionOrder": 2,
+          "executionOrder": 7,
           "success": true
         }
       },
-      "execution_count": 2,
+      "execution_count": 7,
       "outputs": []
     },
     {
@@ -57,26 +57,26 @@
         "language": "java",
         "id": "d2eda5c1-da97-48a5-9bca-54c12aa368b3",
         "executionSummary": {
-          "executionOrder": 4,
+          "executionOrder": 8,
           "success": true
         }
       },
-      "execution_count": 4,
+      "execution_count": 8,
       "outputs": [
         {
           "output_type": "execute_result",
           "data": {
-            "text/plain": "1 2 3 4 5 \r\n"
+            "text/plain": "1 3 4 5 6 \r\n"
           },
           "metadata": {},
-          "execution_count": 4
+          "execution_count": 8
         }
       ]
     },
     {
       "id": "27cc5978-dcc8-4788-b332-658b42e88eb9",
       "cell_type": "markdown",
-      "source": "### 3. To get the size of Linked List",
+      "source": "### 3. To get the size of Linked ",
       "metadata": {
         "language": "markdown",
         "id": "27cc5978-dcc8-4788-b332-658b42e88eb9"
@@ -86,6 +86,150 @@
       "id": "c27c088d-4d72-4788-9587-3fc2840175bd",
       "cell_type": "code",
       "source": "\r\npublic int getLength(Node<Integer> head){\r\n        Node<Integer> temp = head;\r\n        int count = 0;\r\n\r\n        while(temp != null){\r\n            count++;\r\n            temp = temp.next;\r\n        }\r\n\r\n        return count;\r\n    }",
+      "metadata": {
+        "language": "java",
+        "id": "c27c088d-4d72-4788-9587-3fc2840175bd",
+        "executionSummary": {
+          "executionOrder": 9,
+          "success": true
+        }
+      },
+      "execution_count": 9,
+      "outputs": []
+    },
+    {
+      "id": "24513c05-e1f9-4291-b7a8-08b1656794b1",
+      "cell_type": "markdown",
+      "source": "### 4. To insert node at particular position",
+      "metadata": {
+        "language": "markdown",
+        "id": "24513c05-e1f9-4291-b7a8-08b1656794b1"
+      }
+    },
+    {
+      "id": "6442d422-cfcd-4c67-84e9-635e81aa5053",
+      "cell_type": "code",
+      "source": "public Node<Integer> insertNode(Node<Integer> head, int num, int pos){\r\n        Node<Integer> newNode = new Node<>(num);\r\n\r\n        if(pos == 0){\r\n            newNode.next = head;\r\n            head = newNode;\r\n            return head;\r\n\r\n        }\r\n\r\n        Node<Integer> prev = head;\r\n        int count = 0;\r\n        while(count < pos - 1 && prev != null){\r\n            prev = prev.next;\r\n            count++;\r\n        }\r\n\r\n        if(prev != null){\r\n            newNode.next = prev.next;\r\n            prev.next = newNode;\r\n        }\r\n\r\n\r\n        return head;\r\n    }",
+      "metadata": {
+        "language": "java",
+        "id": "6442d422-cfcd-4c67-84e9-635e81aa5053",
+        "executionSummary": {
+          "executionOrder": 10,
+          "success": true
+        }
+      },
+      "execution_count": 10,
+      "outputs": []
+    },
+    {
+      "id": "1b854df9-11f7-4029-b432-f0ec7edc1d12",
+      "cell_type": "markdown",
+      "source": "### 5. To delete a node at particular pos",
+      "metadata": {
+        "language": "markdown",
+        "id": "1b854df9-11f7-4029-b432-f0ec7edc1d12"
+      }
+    },
+    {
+      "id": "9ec75548-3662-49c0-8cbe-aafe9846c463",
+      "cell_type": "code",
+      "source": "public Node<Integer> deleteNode(Node<Integer> head, int pos){\r\n\r\n        if(head == null){\r\n            return null;\r\n        }\r\n\r\n        if(pos == 0){\r\n            return head.next;\r\n        }\r\n\r\n        Node<Integer> prev = head;\r\n        int count = 0;\r\n\r\n        while(count < pos - 1 && prev != null){\r\n            prev = prev.next;\r\n            count++;\r\n        }\r\n\r\n        if(prev == null || prev.next == null){\r\n            return head;\r\n        }\r\n        prev.next = prev.next.next;\r\n\r\n        return head;\r\n\r\n    }",
+      "metadata": {
+        "language": "java",
+        "id": "9ec75548-3662-49c0-8cbe-aafe9846c463",
+        "executionSummary": {
+          "executionOrder": 11,
+          "success": true
+        }
+      },
+      "execution_count": 11,
+      "outputs": []
+    },
+    {
+      "id": "81dea9c5-6c9c-4e7d-a7fd-8f614ce4056a",
+      "cell_type": "markdown",
+      "source": "### 6. To find a particular node",
+      "metadata": {
+        "language": "markdown",
+        "id": "81dea9c5-6c9c-4e7d-a7fd-8f614ce4056a"
+      }
+    },
+    {
+      "id": "a566c1db-18df-4506-9b33-965d2afcf4fd",
+      "cell_type": "code",
+      "source": " public int findNode(Node<Integer> head, int num){\r\n\r\n        int pos = 0;\r\n        while(head != null){\r\n\r\n            if(head.data == num){\r\n                return pos;\r\n            }\r\n            head = head.next;\r\n            pos++;\r\n        }\r\n\r\n        return -1;\r\n\r\n    }",
+      "metadata": {
+        "language": "java",
+        "id": "a566c1db-18df-4506-9b33-965d2afcf4fd",
+        "executionSummary": {
+          "executionOrder": 12,
+          "success": true
+        }
+      },
+      "execution_count": 12,
+      "outputs": []
+    },
+    {
+      "id": "ee08a033-9f47-4c4c-b964-ce56d8ab5ddb",
+      "cell_type": "markdown",
+      "source": "### 7. To insert in sorted linked list",
+      "metadata": {
+        "language": "markdown",
+        "id": "ee08a033-9f47-4c4c-b964-ce56d8ab5ddb"
+      }
+    },
+    {
+      "id": "37172cd4-87c0-46ce-b8ec-0c7bc515a886",
+      "cell_type": "code",
+      "source": "public Node<Integer> insertInSorted(Node<Integer> head, int data) {\r\n\r\n        Node<Integer> newNode = new Node<>(data);\r\n\r\n        // Empty list or insertion before head\r\n        if (head == null || data < head.data) {\r\n            newNode.next = head;\r\n            return newNode;\r\n        }\r\n\r\n        Node<Integer> temp = head;\r\n\r\n        // Find correct position\r\n        while (temp.next != null && temp.next.data < data) {\r\n            temp = temp.next;\r\n        }\r\n\r\n        newNode.next = temp.next;\r\n        temp.next = newNode;\r\n\r\n        return head;\r\n    }",
+      "metadata": {
+        "language": "java",
+        "id": "37172cd4-87c0-46ce-b8ec-0c7bc515a886",
+        "executionSummary": {
+          "executionOrder": 14,
+          "success": true
+        }
+      },
+      "execution_count": 14,
+      "outputs": []
+    },
+    {
+      "id": "2310e519-4ac7-4991-bb75-4dbac13db0cf",
+      "cell_type": "markdown",
+      "source": "### 8. To delete in sorted linked list",
+      "metadata": {
+        "language": "markdown",
+        "id": "2310e519-4ac7-4991-bb75-4dbac13db0cf"
+      }
+    },
+    {
+      "id": "10bd0c88-876a-456c-97e0-2e65f1f0070b",
+      "cell_type": "code",
+      "source": "static Node<Integer> deleteInSorted(Node<Integer> head, int data) {\r\n\r\n        // Empty list\r\n        if (head == null) {\r\n            return null;\r\n        }\r\n\r\n        // Delete head\r\n        if (head.data == data) {\r\n            return head.next;\r\n        }\r\n\r\n        Node<Integer> temp = head;\r\n\r\n        // Find node before the node to delete\r\n        while (temp.next != null && temp.next.data != data) {\r\n            temp = temp.next;\r\n        }\r\n\r\n        // Delete if found\r\n        if (temp.next != null) {\r\n            temp.next = temp.next.next;\r\n        }\r\n\r\n        return head;\r\n    }",
+      "metadata": {
+        "language": "java",
+        "id": "10bd0c88-876a-456c-97e0-2e65f1f0070b",
+        "executionSummary": {
+          "executionOrder": 16,
+          "success": true
+        }
+      },
+      "execution_count": 16,
+      "outputs": []
+    },
+    {
+      "id": "9a695977-a4f2-4846-80af-881663387117",
+      "cell_type": "markdown",
+      "source": "### 9. To Reverse the linked list best approach",
+      "metadata": {
+        "language": "markdown",
+        "id": "9a695977-a4f2-4846-80af-881663387117"
+      }
+    },
+    {
+      "id": "16c2ef31-fd30-49a3-8c43-db9df828217c",
+      "cell_type": "code",
+      "source": "public Node<Integer> reverseBest(Node<Integer> head){\r\n        if(head == null || head.next == null){\r\n            return head;\r\n        }\r\n\r\n        Node<Integer> ans = reverseBest(head.next);\r\n        Node<Integer> tail = head.next;\r\n        tail.next = head;\r\n        head.next = null;\r\n        return ans;\r\n        \r\n\r\n    }",
       "metadata": {
         "language": "java"
       },
