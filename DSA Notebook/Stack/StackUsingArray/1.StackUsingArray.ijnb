@@ -1,0 +1,89 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 5,
+  "metadata": {
+    "language_info": {
+      "name": "java"
+    }
+  },
+  "cells": [
+    {
+      "id": "582df44c-baf6-43bd-9d02-0550fe083fe3",
+      "cell_type": "markdown",
+      "source": "# **Stack Using Array**",
+      "metadata": {
+        "language": "markdown",
+        "id": "582df44c-baf6-43bd-9d02-0550fe083fe3"
+      }
+    },
+    {
+      "id": "751581c3-4edb-4a33-9a28-6300bc840c58",
+      "cell_type": "markdown",
+      "source": "## 1.Creation of Stack and Basic Operation",
+      "metadata": {
+        "language": "markdown",
+        "id": "751581c3-4edb-4a33-9a28-6300bc840c58"
+      }
+    },
+    {
+      "id": "a64fcf8f-3649-42c5-ae08-de09ffba12ef",
+      "cell_type": "code",
+      "source": "public class StackEmptyException extends Exception{\r\n}\r\n\r\npublic class StackUsingArray {\r\n    private int data[];\r\n    private int top;\r\n\r\n    public StackUsingArray(){\r\n        this.data = new int[10];\r\n        this.top = -1;\r\n    }\r\n\r\n    // For pushing into stack\r\n    public void push(int data){\r\n        if(top == this.data.length - 1){\r\n           doubleCapacity();\r\n        }\r\n        top += 1;\r\n        this.data[top] = data;\r\n\r\n\r\n    }\r\n\r\n    // To delete top element from stack\r\n    public int pop(){\r\n        if(top == -1){\r\n        //    throw new StackEmptyException();\r\n        }\r\n\r\n        return this.data[top--];\r\n    }\r\n\r\n    // To get the top most element\r\n    public int top() throws StackEmptyException{\r\n        if(top == -1){\r\n            // throw new StackEmptyException();\r\n        }\r\n        return this.data[top];\r\n    }\r\n\r\n    // To get the size of stack\r\n    public int size(){\r\n        return top + 1;\r\n    }\r\n\r\n    // To find if stack is empty\r\n    public boolean isEmpty(){\r\n        return top == -1;\r\n    }\r\n\r\n    // To double the capacity when stack is full\r\n    private void doubleCapacity(){\r\n        int temp[] = this.data;\r\n        this.data = new int[2 * temp.length];\r\n\r\n        for(int i = 0; i < temp.length; i++){\r\n            this.data[i] = temp[i];\r\n        }\r\n\r\n    }\r\n}\r\n\r\n",
+      "metadata": {
+        "language": "java",
+        "executionSummary": {
+          "executionOrder": 13,
+          "success": true
+        }
+      },
+      "execution_count": 13,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {},
+          "metadata": {},
+          "execution_count": 13
+        }
+      ]
+    },
+    {
+      "id": "d4d6eff6-af23-48c9-89b5-be28971e24c8",
+      "cell_type": "markdown",
+      "source": "## 2. To print the elements of stack",
+      "metadata": {
+        "language": "markdown",
+        "id": "d4d6eff6-af23-48c9-89b5-be28971e24c8"
+      }
+    },
+    {
+      "id": "1690475e-0f8b-4cfc-afbd-109daceeeef8",
+      "cell_type": "code",
+      "source": "public void print(StackUsingArray s){\r\n        \r\n        while(!s.isEmpty()){\r\n            System.out.println(s.pop());\r\n        }\r\n    \r\n}\r\n\r\n        // Remember stack will become empty after poping all elements",
+      "metadata": {
+        "language": "java",
+        "executionSummary": {
+          "executionOrder": 14,
+          "success": true
+        }
+      },
+      "execution_count": 14,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {},
+          "metadata": {},
+          "execution_count": 14
+        }
+      ]
+    },
+    {
+      "id": "8ae09e23-860a-4074-929b-634a458d524f",
+      "cell_type": "markdown",
+      "source": "",
+      "metadata": {
+        "language": "markdown",
+        "id": "8ae09e23-860a-4074-929b-634a458d524f"
+      }
+    }
+  ]
+}
