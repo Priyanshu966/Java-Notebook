@@ -1,0 +1,50 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 5,
+  "metadata": {
+    "language_info": {
+      "name": "java"
+    }
+  },
+  "cells": [
+    {
+      "id": "0f9660f9-4d2d-4583-92ba-dd9b5ac4148c",
+      "cell_type": "markdown",
+      "source": "# **Stack Using LinkedList**",
+      "metadata": {
+        "language": "markdown",
+        "id": "0f9660f9-4d2d-4583-92ba-dd9b5ac4148c"
+      }
+    },
+    {
+      "id": "2bac497a-a2ba-4f79-940c-4244828bb071",
+      "cell_type": "markdown",
+      "source": "### 1.Creation And Basic Operation",
+      "metadata": {
+        "language": "markdown",
+        "id": "2bac497a-a2ba-4f79-940c-4244828bb071"
+      }
+    },
+    {
+      "id": "dd14a231-36be-43f9-8ab2-fa5ad4e886dc",
+      "cell_type": "code",
+      "source": "// Linked List Node\r\npublic class Node<T> {\r\n\r\n    public T data;\r\n    public Node<T> next;\r\n\r\n    public Node(T data){\r\n        this.data = data;\r\n        this.next = null;\r\n    }\r\n}\r\n\r\n// Stack Class\r\npublic class StackUsingLinkedList<T> {\r\n    private Node<T> head;  // We are writing head node but it will always point to the tail of list so insertion and deletion will be of O(1)\r\n    private int size;  // Maintain size so that we dont have to traverse and find the size\r\n\r\n    public StackUsingLinkedList(){          \r\n        this.head = null;\r\n        this.size = 0;\r\n    }\r\n\r\n\r\n    public void push(T data){\r\n        Node<T> newNode = new Node<>(data);            // Example push 10 20 30 40 \r\n                                                       // It should point like this 10->20->30->40  where head = 40\r\n        newNode.next = head;                           // But actually we are maintaining like this  null<-10<-20<-30<-40 where head = 40\r\n        head = newNode;                                // If we want to delete , we will just do head = head.next;\r\n\r\n        size++;\r\n\r\n    }\r\n    public T pop(){\r\n        if(head == null){\r\n            // throw new StackEmptyException();\r\n        }\r\n        T temp = head.data;\r\n        head = head.next;\r\n        size--;\r\n        return temp;\r\n    }\r\n\r\n    public T top(){\r\n        if(head == null){\r\n//            throw new StackEmptyException();\r\n        }\r\n        return head.data;\r\n    }\r\n\r\n    public int size(){\r\n        return size;\r\n    }\r\n\r\n    public boolean isEmpty(){\r\n        return size == 0;\r\n    }\r\n\r\n}",
+      "metadata": {
+        "language": "java",
+        "executionSummary": {
+          "executionOrder": 2,
+          "success": true
+        }
+      },
+      "execution_count": 2,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {},
+          "metadata": {},
+          "execution_count": 2
+        }
+      ]
+    }
+  ]
+}
