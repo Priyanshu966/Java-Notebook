@@ -237,18 +237,18 @@
       "outputs": []
     },
     {
-      "id": "c11684b9-0df9-4408-8425-5e6ecfd787af",
+      "id": "90e0a160-2933-491b-b5b9-4f143feec96c",
       "cell_type": "markdown",
       "source": "### 10. Merger Two Sorted Linked List",
       "metadata": {
         "language": "markdown",
-        "id": "c11684b9-0df9-4408-8425-5e6ecfd787af"
+        "id": "90e0a160-2933-491b-b5b9-4f143feec96c"
       }
     },
     {
-      "id": "7b410544-1734-4551-9645-b59db05f6f01",
+      "id": "d52602cb-812f-41cf-919b-5688636ba187",
       "cell_type": "code",
-      "source": "public Node<Integer> merge(Node<Integer> n1, Node<Integer> n2){\r\n\r\n    if (n1 == null) {\r\n        return n2;\r\n    }\r\n\r\n    if (n2 == null) {\r\n        return n1;\r\n    }\r\n\r\n    Node<Integer> dummy = new Node<>();          // let n1 - 1, 5, 8\r\n    dummy.data = 0;                              // l2t n2 - 2,3,4,7\r\n    Node<Integer> tail = dummy;                  // dummy node help to reduce code by acting as head, we dont have to choose head from n1 and n2\r\n                                                 // result 0 ->1 ->2 like that , and we return dummy.next in last\r\n    while(n1 != null && n2 != null){\r\n\r\n        if(n1.data < n2.data){\r\n            tail.next = n1;\r\n            n1 = n1.next;\r\n        }else{\r\n            tail.next = n2;\r\n            n2 = n2.next;\r\n         }\r\n         tail = tail.next;\r\n    }\r\n\r\n    if(n1 != null){\r\n        tail.next = n1;\r\n    }\r\n    if(n2 != null){\r\n        tail.next = n2;\r\n    }\r\n\r\n    return dummy.next;\r\n\r\n    }\r\n\r\n    // Time complexity- O(m + n) m = size of 1st list and n = size of 2nd list\r\n    // Space Complexity- O(1)",
+      "source": "public Node<Integer> merge(Node<Integer> n1, Node<Integer> n2){\r\n\r\n    if (n1 == null) {\r\n        return n2;\r\n    }\r\n\r\n    if (n2 == null) {\r\n        return n1;\r\n    }\r\n\r\n    Node<Integer> dummy = new Node<>(0);          // let n1 - 1, 5, 8\r\n                                                  // l2t n2 - 2,3,4,7\r\n    Node<Integer> tail = dummy;                  // dummy node help to reduce code by acting as head, we dont have to choose head from n1 and n2\r\n                                                 // result 0 ->1 ->2 like that , and we return dummy.next in last\r\n    while(n1 != null && n2 != null){\r\n\r\n        if(n1.data < n2.data){\r\n            tail.next = n1;\r\n            n1 = n1.next;\r\n        }else{\r\n            tail.next = n2;\r\n            n2 = n2.next;\r\n         }\r\n         tail = tail.next;\r\n    }\r\n\r\n    if(n1 != null){\r\n        tail.next = n1;\r\n    }\r\n    if(n2 != null){\r\n        tail.next = n2;\r\n    }\r\n\r\n    return dummy.next;\r\n\r\n    }\r\n\r\n    // Time complexity- O(m + n) m = size of 1st list and n = size of 2nd list\r\n    // Space Complexity- O(1)",
       "metadata": {
         "language": "java"
       },
